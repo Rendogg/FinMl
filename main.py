@@ -20,8 +20,8 @@ from utilFunctions import sidebar, apply_theme
 firebase_config = dict(st.secrets["firebase"])
 cred = credentials.Certificate(firebase_config)
 
-
-firebase_admin.initialize_app(cred, {
+if not firebase_admin._apps:
+    firebase_admin.initialize_app(cred, {
         "databaseURL": "https://finmllab-69af9-default-rtdb.europe-west1.firebasedatabase.app/"
     })
 

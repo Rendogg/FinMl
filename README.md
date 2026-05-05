@@ -1,2 +1,5 @@
-# FinMl
-A streamlit application for a machine learning education tool within the domain of Finances
+## Requirements
+Python 3.11
+## How to Run Application
+pip install -r requirements.txt
+python -m streamlit run main.py
